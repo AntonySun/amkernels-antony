@@ -101,7 +101,11 @@ void check_hit(char ch) {
     wrong++;
   } else {
     hit++;
-    chars[m].v = -(screen_h - CHAR_H + 1) / (FPS);
+    chars[m].v =  (screen_h - CHAR_H + 1) / (FPS);
+  // chars[m].v = 0-((screen_h - CHAR_H + 1))/30;
+   //chars[m].v = 0 - (screen_h - CHAR_H + 1) / randint(FPS * 3 / 2, FPS * 2);
+    chars[m].v = -chars[m].v;
+    printf(" now the screen_h is: %d, the CHAR_H is: %d, the FPS is: %d, the v is: %d\n",(int)screen_h, CHAR_H, FPS, chars[m].v);
   }
 }
 
