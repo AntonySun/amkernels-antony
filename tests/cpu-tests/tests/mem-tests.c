@@ -1,7 +1,7 @@
 #include <stdint.h>
 void putch(char ch);
 
-volatile uint32_t *aa = (volatile uint32_t *)(uintptr_t)(0xa0000000);
+volatile uint32_t *aa = (volatile uint32_t *)(uintptr_t)(0xa0003dec);
 
 int main() {
     uint32_t num = 0x83463931;
